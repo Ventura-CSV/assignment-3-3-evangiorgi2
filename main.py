@@ -1,15 +1,19 @@
 def main():
     email = input('Enter your email: ')
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+   
     result = True
+    
+    if not 5 <= len(email) <= 30:
+        result = False
+    else:
+        if not email.find('@'):
+            result = False
+        else:
+            if not email.isalpha():
+                result = False
 
-    ########################################
-    # Do not delete the return statement
-    ########################################
+    print(result)    
+
     return result
 
 
